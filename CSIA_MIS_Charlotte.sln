@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1FA57B71-3229-42C9-8034-5E3165ABF88E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cfg", "cfg", "{C7EC1FE7-42F1-4851-9E4B-E95F29C238F7}"
+	ProjectSection(SolutionItems) = preProject
+		cfg\CFG_Reporting.xml = cfg\CFG_Reporting.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{20A55EEC-6C7F-4B87-8774-8850B99984CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{EDD4C058-E6F5-451B-9130-9BDD45209A8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "setup", "setup", "{F281F54B-0395-469F-821A-90C773546A82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{C10FD705-8C6A-442A-B437-21F21356A40C}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Report_Template", "src\Report_Template\Report_Template.rptproj", "{44F65269-08B9-457A-80E4-B4CEB5C2FADC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC}.Debug|Default.ActiveCfg = Debug
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC}.Debug|Default.Build.0 = DebugLocal
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC}.Debug|Default.Deploy.0 = DebugLocal
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC}.DebugLocal|Default.Build.0 = DebugLocal
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC}.Release|Default.ActiveCfg = Release
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC}.Release|Default.Build.0 = Release
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44F65269-08B9-457A-80E4-B4CEB5C2FADC} = {1FA57B71-3229-42C9-8034-5E3165ABF88E}
+	EndGlobalSection
+EndGlobal
