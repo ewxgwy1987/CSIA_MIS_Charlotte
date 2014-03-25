@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="PGLBHSDB_NEW">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+<<<<<<< HEAD
+    <ConnectString>Data Source=SG10031CSD6782;Initial Catalog=BHSDB</ConnectString>
+=======
+    <ConnectString>Data Source=EWXGWY1987-PC\MSSQLSERVERGWY;Initial Catalog=BHSDB</ConnectString>
+>>>>>>> 3086e603467e707887f5cf9dd96a9b70ff8d4769
+  </ConnectionProperties>
+  <DataSourceID>511d9b7d-8247-4ab9-a221-e419921f5b8e</DataSourceID>
+</RptDataSource>

@@ -182,7 +182,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Subsystem</Value>
+                              <Value>Subsystemss</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1914,9 +1914,20 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="PGLBHSDB">
-      <DataSourceReference>PGLBHSDB_NEW</DataSourceReference>
-      <rd:SecurityType>None</rd:SecurityType>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>="Data Source=" &amp; Parameters!ServerName.Value &amp;";Initial Catalog=" &amp; Parameters!Database.Value</ConnectString>
+      </ConnectionProperties>
+      <rd:SecurityType>DataBase</rd:SecurityType>
       <rd:DataSourceID>9a6c5141-08eb-4401-83b5-7c8aea807afa</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DynamicDS">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>="Data Source=EWXGWY1987-PC\MSSQLSERVERGWY;Initial Catalog=" &amp; Parameters!Database.Value</ConnectString>
+      </ConnectionProperties>
+      <rd:SecurityType>DataBase</rd:SecurityType>
+      <rd:DataSourceID>48731764-13eb-4768-975e-b691e0b5260d</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1955,7 +1966,7 @@
     </DataSet>
     <DataSet Name="dsMain">
       <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
+        <DataSourceName>DynamicDS</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@DTFrom">
             <Value>=Parameters!DTFrom.Value</Value>
@@ -2016,7 +2027,7 @@ FROM  SUBSYSTEMS</CommandText>
             <Value>=Parameters!Subsystem.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>SELECT   DBO.RPT_FORMAT_LOCATION(LOCATION) AS LOCATION
+        <CommandText>SELECT   dbo.RPT_FORMAT_LOCATION(LOCATION) AS LOCATION
 FROM    LOCATIONS
 WHERE   (SUBSYSTEM IN (@Subsystem))</CommandText>
       </Query>
@@ -2087,6 +2098,54 @@ WHERE 	MDS_USED='1'</CommandText>
     </DataSet>
   </DataSets>
   <ReportParameters>
+    <ReportParameter Name="test">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <DefaultValue>
+        <Values>
+          <Value> </Value>
+        </Values>
+      </DefaultValue>
+      <Prompt> </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ServerName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EWXGWY1987-PC\MSSQLSERVERGWY</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ServerName</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>EWXGWY1987-PC\MSSQLSERVERGWY</Value>
+            <Label>EWXGWY1987-PC\MSSQLSERVERGWY</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Database">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>BHSDB</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Database</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>BHSDB</Value>
+            <Label>BHSDB</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>BHSDB_Charlotte</Value>
+            <Label>BHSDB_Charlotte</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
     <ReportParameter Name="DFormat">
       <DataType>String</DataType>
       <DefaultValue>
