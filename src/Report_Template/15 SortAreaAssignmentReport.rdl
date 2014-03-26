@@ -1135,7 +1135,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT15_SortAreaAssignment_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_SortAreaAssignment</CommandText>
       </Query>
       <Fields>
         <Field Name="Physical_MakeUp">

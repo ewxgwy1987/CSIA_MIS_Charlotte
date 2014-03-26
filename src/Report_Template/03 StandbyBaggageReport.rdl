@@ -2039,7 +2039,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT_STANDBY_BAGGAGE_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_STANDBY_BAGGAGE</CommandText>
       </Query>
       <Fields>
         <Field Name="TIME_STAMP">

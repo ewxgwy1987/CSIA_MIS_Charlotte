@@ -1747,7 +1747,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT22_CRITICALTRACKINGPEC_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_CRITICALTRACKINGPEC</CommandText>
       </Query>
       <Fields>
         <Field Name="LICENSE_PLATE">
@@ -1824,7 +1824,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT22_ScreeningStatus_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_ScreeningStatus</CommandText>
       </Query>
       <Fields>
         <Field Name="RESULT">

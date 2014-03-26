@@ -1924,7 +1924,7 @@ AND  CONVERT(VARCHAR(10), @DTTo,111))
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT19_BSM_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_BSM</CommandText>
       </Query>
       <Fields>
         <Field Name="AIRLINE">

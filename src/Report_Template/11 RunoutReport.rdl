@@ -788,7 +788,6 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1974,7 +1973,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT11_RUNOUT</CommandText>
+        <CommandText>stp_RPT_CLT_RUNOUT</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">

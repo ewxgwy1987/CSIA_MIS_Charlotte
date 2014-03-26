@@ -433,6 +433,11 @@
               <Group Name="table1_Details_Group2">
                 <DataElementName>Detail</DataElementName>
               </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!ALM_TIMESET.Value</Value>
+                </SortExpression>
+              </SortExpressions>
               <TablixMembers>
                 <TablixMember />
               </TablixMembers>
@@ -544,7 +549,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT0502_EquipCorrection</CommandText>
+        <CommandText>stp_RPT_CLT_EquipCorrection</CommandText>
       </Query>
       <Fields>
         <Field Name="ALM_SUBSYSTEM">

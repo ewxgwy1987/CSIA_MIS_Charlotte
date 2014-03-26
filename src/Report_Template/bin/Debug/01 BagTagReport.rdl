@@ -92,7 +92,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT01_BAGTAG_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_BAGTAG</CommandText>
       </Query>
       <Fields>
         <Field Name="AIRLINE">
@@ -119,9 +119,17 @@
           <DataField>TAG_READ_TIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="SDO">
+          <DataField>SDO</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
         <Field Name="TAG_READ_LOCATION">
           <DataField>TAG_READ_LOCATION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STD">
+          <DataField>STD</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="BAG_TYPE">
           <DataField>BAG_TYPE</DataField>

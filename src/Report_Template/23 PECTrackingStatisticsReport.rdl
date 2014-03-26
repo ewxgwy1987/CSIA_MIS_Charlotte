@@ -1669,7 +1669,7 @@ FROM (
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT23_TRACKEDPHOTOCELL</CommandText>
+        <CommandText>stp_RPT_CLT_TRACKEDPHOTOCELL</CommandText>
       </Query>
       <Fields>
         <Field Name="PhotoCellID">
