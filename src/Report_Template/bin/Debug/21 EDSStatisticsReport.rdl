@@ -2649,7 +2649,7 @@ ORDER BY ALM_STARTTIME;</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT21_EDSOperation</CommandText>
+        <CommandText>stp_RPT_CLT_EDSOperation</CommandText>
       </Query>
       <Fields>
         <Field Name="EDS_ID">
@@ -2666,7 +2666,7 @@ ORDER BY ALM_STARTTIME;</CommandText>
         </Field>
         <Field Name="OPER_DURATION">
           <DataField>OPER_DURATION</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="BAGS_ALARM">
           <DataField>BAGS_ALARM</DataField>
@@ -2690,7 +2690,7 @@ ORDER BY ALM_STARTTIME;</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT21_EDSMalfunction</CommandText>
+        <CommandText>stp_RPT_CLT_EDSMalfunction</CommandText>
       </Query>
       <Fields>
         <Field Name="ALM_SUBSYSTEM">

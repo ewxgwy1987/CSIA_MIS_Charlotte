@@ -1654,7 +1654,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT18_BAGNOTFOUND_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_BAGNOTFOUND</CommandText>
       </Query>
       <Fields>
         <Field Name="CARRIER_ID">

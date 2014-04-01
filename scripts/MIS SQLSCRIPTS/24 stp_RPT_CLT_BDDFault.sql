@@ -2,7 +2,7 @@ GO
 USE [BHSDB];
 GO
 
-ALTER PROCEDURE dbo.stp_RPT24_BDDFault
+ALTER PROCEDURE dbo.stp_RPT_CLT_BDDFault
 		  @DTFrom datetime, 
 		  @DTTo datetime
 AS

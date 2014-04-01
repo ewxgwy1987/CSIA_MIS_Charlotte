@@ -3286,7 +3286,7 @@ WHERE SDO=CONVERT(DATETIME,CONVERT(VARCHAR,@SDO,103),103)
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT04_SortCorrelation_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_SortCorrelation</CommandText>
       </Query>
       <Fields>
         <Field Name="AIRLINE">

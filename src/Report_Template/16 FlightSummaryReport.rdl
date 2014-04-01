@@ -927,7 +927,6 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -2010,7 +2009,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT16_FlightSummary_GWYTEST</CommandText>
+        <CommandText>stp_RPT_OKC_FlightSummary</CommandText>
       </Query>
       <Fields>
         <Field Name="AIRLINE">

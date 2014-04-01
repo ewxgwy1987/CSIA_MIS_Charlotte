@@ -2,7 +2,7 @@ GO
 USE [BHSDB];
 GO
 
-ALTER PROCEDURE dbo.stp_RPT21_EDSOperation
+ALTER PROCEDURE dbo.stp_RPT_CLT_EDSOperation
 		  @DTFrom datetime, 
 		  @DTTo datetime
 AS

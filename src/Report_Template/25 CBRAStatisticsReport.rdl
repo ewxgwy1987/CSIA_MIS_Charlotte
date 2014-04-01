@@ -771,7 +771,6 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1782,7 +1781,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT25_CBRASTATISTICS_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_CBRASTATISTICS</CommandText>
       </Query>
       <Fields>
         <Field Name="CBRA_ID">

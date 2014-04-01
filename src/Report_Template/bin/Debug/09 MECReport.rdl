@@ -95,7 +95,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT09_MESUTILIZATION_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_MESUTILIZATION_DISPATCH</CommandText>
       </Query>
       <Fields>
         <Field Name="ME_STATION">
@@ -140,7 +140,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT09_MESUTILIZATION_REASON</CommandText>
+        <CommandText>stp_RPT_CLT_MESUTILIZATION_REASON</CommandText>
       </Query>
       <Fields>
         <Field Name="ME_STATION">
@@ -2152,7 +2152,6 @@
                             <PaddingBottom>1pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

@@ -54,6 +54,7 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1242,7 +1243,7 @@ WHERE 	MDS_USED='1'</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT08_EquipFaultSummary</CommandText>
+        <CommandText>stp_RPT_CLT_EquipFaultSummary</CommandText>
       </Query>
       <Fields>
         <Field Name="ALM_ALMAREA2">

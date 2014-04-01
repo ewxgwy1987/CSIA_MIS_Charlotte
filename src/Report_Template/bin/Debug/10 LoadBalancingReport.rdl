@@ -2758,12 +2758,15 @@
     <DataSet Name="dsSubsystem">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT DISTINCT SUBSYSTEM
-FROM (
-		SELECT SUBSYSTEM FROM SUBSYSTEMS
-		UNION ALL
-		SELECT SUBSYSTEM FROM MDS_BAG_COUNTERS
-	  ) AS ALL_SUBSYSTEM</CommandText>
+        <CommandText>--SELECT DISTINCT SUBSYSTEM
+--FROM (
+--		SELECT SUBSYSTEM FROM SUBSYSTEMS
+--		UNION ALL
+--		SELECT SUBSYSTEM FROM MDS_BAG_COUNTERS
+--	  ) AS ALL_SUBSYSTEM
+
+SELECT DISTINCT SUBSYSTEM
+FROM MIS_SubsystemCatalog</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">
@@ -2830,7 +2833,7 @@ FROM (
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT10_LOADBALANCING_NORMAL</CommandText>
+        <CommandText>stp_RPT_CLT_LOADBALANCING_NORMAL</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM_TYPE">
@@ -2863,7 +2866,7 @@ FROM (
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT10_LOADBALANCING_EDS</CommandText>
+        <CommandText>stp_RPT_CLT_LOADBALANCING_EDS</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM_TYPE">

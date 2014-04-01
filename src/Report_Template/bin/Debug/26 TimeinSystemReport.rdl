@@ -58,7 +58,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT26_TIMEINSYSTEM_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_TIMEINSYSTEM</CommandText>
       </Query>
       <Fields>
         <Field Name="START_TIME">

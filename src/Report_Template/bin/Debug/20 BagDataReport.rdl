@@ -917,6 +917,7 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -2223,7 +2224,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT20_BagData_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_BagData</CommandText>
       </Query>
       <Fields>
         <Field Name="GID">
@@ -2262,9 +2263,17 @@
           <DataField>CBRA_DELIVERED_TIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="EDS_CLEARTIME">
+          <DataField>EDS_CLEARTIME</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
         <Field Name="CBRA_REMOVED_TIME">
           <DataField>CBRA_REMOVED_TIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="EDS_CLEARLOCATION">
+          <DataField>EDS_CLEARLOCATION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CBRA_ETDSTATION_">
           <DataField>CBRA_ETDSTATION#</DataField>

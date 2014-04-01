@@ -3,7 +3,7 @@ USE [BHSDB];
 GO
 
 
-ALTER PROCEDURE dbo.stp_RPT08_EquipFaultSummary
+ALTER PROCEDURE dbo.stp_RPT_CLT_EquipFaultSummary
 		  @DTFrom datetime, 
 		  @DTTo datetime,
 		  @FaultType varchar(max)

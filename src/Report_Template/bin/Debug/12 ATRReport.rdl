@@ -5021,7 +5021,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT12_ATR_HEAD_STATISTIC_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_ATR_HEAD_STATISTIC</CommandText>
       </Query>
       <Fields>
         <Field Name="ATRUNIT">
@@ -5217,7 +5217,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT12_ATR_OVERALL_STATISTIC_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_ATR_OVERALL_STATISTIC</CommandText>
       </Query>
       <Fields>
         <Field Name="ATRUNIT">

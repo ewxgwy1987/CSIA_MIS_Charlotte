@@ -1803,7 +1803,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -2768,7 +2767,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT24_BDDSTATISTICS_OOG_GWYTEST</CommandText>
+        <CommandText>stp_RPT_CLT_BDDSTATISTICS_OOG</CommandText>
       </Query>
       <Fields>
         <Field Name="LOCATION">
@@ -2809,7 +2808,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT24_BDDFault</CommandText>
+        <CommandText>stp_RPT_CLT_BDDFault</CommandText>
       </Query>
       <Fields>
         <Field Name="BMA_ID">
