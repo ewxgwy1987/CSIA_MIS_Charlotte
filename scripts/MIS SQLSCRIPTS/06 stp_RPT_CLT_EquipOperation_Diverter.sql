@@ -3,7 +3,7 @@ USE [BHSDB];
 GO
 
 
-CREATE PROCEDURE dbo.stp_RPT06_EquipOperation_Diverter
+CREATE PROCEDURE dbo.stp_RPT_CLT_EquipOperation_Diverter
 		@DTFrom [datetime],
 		@DTTo [datetime],
 		@SubSystem varchar(MAX)

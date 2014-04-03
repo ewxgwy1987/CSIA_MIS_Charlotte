@@ -2494,7 +2494,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT23_TRACKEDPHOTOCELL</CommandText>
+        <CommandText>stp_RPT_CLT_TRACKEDPHOTOCELL</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">
@@ -2542,7 +2542,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT06_EquipOperation_JAMPHOTOCELL</CommandText>
+        <CommandText>stp_RPT_CLT_EquipOperation_JAMPHOTOCELL</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">
@@ -2574,7 +2574,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT06_EquipOperation_Diverter</CommandText>
+        <CommandText>stp_RPT_CLT_EquipOperation_Diverter</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">

@@ -3,7 +3,7 @@ USE [BHSDB];
 GO
 
 
-ALTER PROCEDURE dbo.stp_RPT06_EquipOperation_JAMPHOTOCELL
+ALTER PROCEDURE dbo.stp_RPT_CLT_EquipOperation_JAMPHOTOCELL
 		@DTFrom [datetime],
 		@DTTo [datetime],
 		@SubSystem varchar(MAX)
