@@ -1600,12 +1600,8 @@
     <DataSet Name="dsSubsystem">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT DISTINCT SUBSYSTEM
-FROM (
-		SELECT SUBSYSTEM FROM SUBSYSTEMS
-		UNION ALL
-		SELECT SUBSYSTEM FROM MDS_BAG_COUNTERS
-	  ) AS ALL_SUBSYSTEM</CommandText>
+        <CommandText>SELECT SUBSYSTEM 
+FROM SUBSYSTEMS</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">

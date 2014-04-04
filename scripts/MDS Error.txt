@@ -1,0 +1,31 @@
+1. some subsystem not exists
+SubsystemID\AA_3TC	3TC
+SubsystemID\AA_2TC	2TC
+SubsystemID\AA_5TC	5TC
+RB-ME2-1-ES
+RB-ME2-1-ES
+
+2. some equipment id not exists
+
+3. some equipment id is wrong(repeat)
+EquipmentID\CS_CCF2_15SD_ES	CS-CCF2-14-ES	xxx	CS-CCF2-15SD-ES ***
+
+EquipmentID\CS_ML3_03SD_ES	CS-ML3-3SD-ES
+EquipmentID\CS_ML3_3SD_ES		CS-ML3-3SD-ES
+
+EquipmentID\OOG1_01	OOG1-1
+EquipmentID\SACCOM02	SACCOM01	xxx	SACCOM02
+EquipmentID\TC2_08	TC2-7	xxx	TC2-8
+EquipmentID\TC4_010	TC4-10
+EquipmentID\TC4_011	TC4-11
+EquipmentID\TC4_014	TC4-14
+
+4. TMU6-01  TMU6-02 IN MF5 AND MF6 IN ALM LIST
+
+
+5. some 0 in equipment ID
+
+6. SOME EQUIPMENT 916 NOT IN ALM LIST
+
+7.CS-MU1A-ES => CS-MU1-A-ES
+
