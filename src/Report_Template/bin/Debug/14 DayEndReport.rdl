@@ -5686,7 +5686,7 @@ SELECT @SUBSYSTEM AS ALL_SUBSYSTEM;</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT14_DAYEND_INPUT</CommandText>
+        <CommandText>stp_RPT_CLT_DAYEND_INPUT</CommandText>
       </Query>
       <Fields>
         <Field Name="LOCATION">
@@ -5714,7 +5714,7 @@ SELECT @SUBSYSTEM AS ALL_SUBSYSTEM;</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT14_DAYEND_ATRSTATS</CommandText>
+        <CommandText>stp_RPT_CLT_DAYEND_ATRSTATS</CommandText>
       </Query>
       <Fields>
         <Field Name="ATRUNIT">
@@ -5751,7 +5751,7 @@ SELECT @SUBSYSTEM AS ALL_SUBSYSTEM;</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT14_DAYEND_BDDSTATS</CommandText>
+        <CommandText>stp_RPT_CLT_DAYEND_BDDSTATS</CommandText>
       </Query>
       <Fields>
         <Field Name="BDD_ARRAY">
@@ -5780,7 +5780,7 @@ SELECT @SUBSYSTEM AS ALL_SUBSYSTEM;</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT14_DAYEND_MESSTATS</CommandText>
+        <CommandText>stp_RPT_CLT_DAYEND_MESSTATS</CommandText>
       </Query>
       <Fields>
         <Field Name="MES_STATION">
@@ -5805,7 +5805,7 @@ SELECT @SUBSYSTEM AS ALL_SUBSYSTEM;</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT14_DAYEND_EDSSTATS</CommandText>
+        <CommandText>stp_RPT_CLT_DAYEND_EDSSTATS</CommandText>
       </Query>
       <Fields>
         <Field Name="EDS_MACHINE">
@@ -5842,7 +5842,7 @@ SELECT @SUBSYSTEM AS ALL_SUBSYSTEM;</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT14_DAYEND_OUTPUT</CommandText>
+        <CommandText>stp_RPT_CLT_DAYEND_OUTPUT</CommandText>
       </Query>
       <Fields>
         <Field Name="OUTPUT_LOCATION">
@@ -5870,7 +5870,7 @@ SELECT @SUBSYSTEM AS ALL_SUBSYSTEM;</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT23_TRACKEDPHOTOCELL</CommandText>
+        <CommandText>stp_RPT_CLT_TRACKEDPHOTOCELL</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">

@@ -581,14 +581,8 @@
     <DataSet Name="dsSubsystem">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT DISTINCT SUBSYSTEM 
-FROM(
-	SELECT SUBSYSTEM 
-	FROM  SUBSYSTEMS
-	UNION
-	SELECT SUBSYSTEM
-	FROM MDS_LOCATIONS_GWY
-	) AS ALL_SUBSYSTEMS</CommandText>
+        <CommandText>SELECT SUBSYSTEM 
+FROM SUBSYSTEMS</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">
@@ -605,21 +599,10 @@ FROM(
             <Value>=Parameters!Subsystem.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>--SELECT   DBO.RPT_FORMAT_LOCATION(LOCATION) AS LOCATION
---FROM    LOCATIONS
---WHERE   (SUBSYSTEM IN (@Subsystem))
-
-SELECT DISTINCT LOCATION
-FROM(
-	SELECT   DBO.RPT_FORMAT_LOCATION(LOCATION) AS LOCATION
-	FROM    LOCATIONS
-	WHERE   (SUBSYSTEM IN (@Subsystem))
-	UNION ALL
-	SELECT LOCATION
-	FROM MDS_LOCATIONS_GWY
-	WHERE (SUBSYSTEM IN (@Subsystem))
-	) AS ALL_LOCATIONS
-ORDER BY LOCATION</CommandText>
+        <CommandText>SELECT 	LOCATION
+FROM	LOCATIONS
+WHERE	SUBSYSTEM IN (@Subsystem)
+ORDER BY INTERNAL_LOC</CommandText>
       </Query>
       <Fields>
         <Field Name="LOCATION">
