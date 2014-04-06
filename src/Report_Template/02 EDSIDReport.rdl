@@ -844,7 +844,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -891,7 +890,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=iif(IsNothing(Fields!SCREENED_TIME.Value),"------",Format(Fields!SCREENED_TIME.Value, Parameters!TFormat.Value))</Value>
+                              <Value>=iif(IsNothing(Fields!SCREENED_TIME.Value),"------",Format(Fields!SCREENED_TIME.Value, Parameters!DFormat.Value &amp; " " &amp; Parameters!TFormat.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -926,7 +925,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=iif(IsNothing(Fields!CLEARED_TIME.Value),"------",Format(Fields!CLEARED_TIME.Value, Parameters!TFormat.Value))</Value>
+                              <Value>=iif(IsNothing(Fields!CLEARED_TIME.Value),"------",Format(Fields!CLEARED_TIME.Value, Parameters!DFormat.Value &amp; " " &amp; Parameters!TFormat.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -996,7 +995,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=iif(IsNothing(Fields!CBRA_DELIVERED_TIME.Value),"------",Format(Fields!CBRA_DELIVERED_TIME.Value, Parameters!TFormat.Value))</Value>
+                              <Value>=iif(IsNothing(Fields!CBRA_DELIVERED_TIME.Value),"------",Format(Fields!CBRA_DELIVERED_TIME.Value, Parameters!DFormat.Value &amp; " " &amp; Parameters!TFormat.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1031,7 +1030,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=iif(IsNothing(Fields!CBRA_REMOVED_TIME.Value),"------",Format(Fields!CBRA_REMOVED_TIME.Value,Parameters!TFormat.Value))</Value>
+                              <Value>=iif(IsNothing(Fields!CBRA_REMOVED_TIME.Value),"------",Format(Fields!CBRA_REMOVED_TIME.Value,Parameters!DFormat.Value &amp; " " &amp; Parameters!TFormat.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1055,6 +1054,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>

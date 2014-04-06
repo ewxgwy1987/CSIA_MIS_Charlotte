@@ -2044,7 +2044,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!FIRST_MU.Value</Value>
+                              <Value>=IIF(ISNOTHING(Fields!FIRST_MU.Value),"----",Fields!FIRST_MU.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -2084,7 +2084,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!BUSINESS_MU.Value</Value>
+                              <Value>=IIF(ISNOTHING(Fields!BUSINESS_MU.Value),"----",Fields!BUSINESS_MU.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -2630,6 +2630,10 @@
                       </TablixMembers>
                     </TablixMember>
                   </TablixMembers>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                    <ToggleItem>AIRLINE</ToggleItem>
+                  </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
@@ -2656,7 +2660,7 @@
   <Width>188.2258mm</Width>
   <Page>
     <PageHeader>
-      <Height>40.79375mm</Height>
+      <Height>43.7625mm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2706,10 +2710,10 @@
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.945in</Top>
-              <Left>2.59875in</Left>
+              <Top>1.22289in</Top>
+              <Left>0.07875in</Left>
               <Height>6mm</Height>
-              <Width>12mm</Width>
+              <Width>15mm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
@@ -2737,10 +2741,10 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.945in</Top>
-              <Left>3.11062in</Left>
+              <Top>1.22289in</Top>
+              <Left>0.71097in</Left>
               <Height>6mm</Height>
-              <Width>45mm</Width>
+              <Width>44.94311mm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
@@ -2752,7 +2756,7 @@
             </Textbox>
             <Line Name="lnPHeaderVSeparator">
               <Left>145.05mm</Left>
-              <Height>38mm</Height>
+              <Height>40.99861mm</Height>
               <Width>0mm</Width>
               <ZIndex>3</ZIndex>
               <Style>
@@ -3053,7 +3057,7 @@
               <Top>0.945in</Top>
               <Left>0.71097in</Left>
               <Height>6mm</Height>
-              <Width>45mm</Width>
+              <Width>120.93542mm</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border>
@@ -3073,7 +3077,7 @@
           <DataElementOutput>ContentsOnly</DataElementOutput>
           <Top>1mm</Top>
           <Left>1mm</Left>
-          <Height>38mm</Height>
+          <Height>40.99861mm</Height>
           <Width>185.06787mm</Width>
           <Style>
             <Border>
