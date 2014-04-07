@@ -654,14 +654,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PLC_ID">
+                    <Textbox Name="LOCATION">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PLC_ID.Value</Value>
+                              <Value>=Fields!LOCATION.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -671,7 +671,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PLC_ID</rd:DefaultName>
+                      <rd:DefaultName>LOCATION</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -691,14 +691,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Online_Status">
+                    <Textbox Name="ONOFF_STATUS">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Online_Status.Value</Value>
+                              <Value>=Fields!ONOFF_STATUS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -710,7 +710,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Online_Status</rd:DefaultName>
+                      <rd:DefaultName>ONOFF_STATUS</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -727,14 +727,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Running_Status">
+                    <Textbox Name="WORKING_STATUS">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Running_Status.Value</Value>
+                              <Value>=Fields!WORKING_STATUS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -746,7 +746,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Running_Status</rd:DefaultName>
+                      <rd:DefaultName>WORKING_STATUS</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1837,19 +1837,34 @@
     <DataSet Name="dsPLCBank">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from  RPT_TEST_PLCBANK ;</CommandText>
+        <CommandText>SELECT	STA.LOCATION, 
+		STAL.DESCRIPTION  AS 'ONOFF_STATUS',
+		CASE STAL.DESCRIPTION
+			WHEN 'OFFLINE' THEN 'Standby' 
+			WHEN 'ONILNE' THEN 'Running'
+		END	AS 'WORKING_STATUS'
+FROM	MDS_STATUS STA, MDS_STATUS_LK STAL, MIS_DEVICE_PLC_MAP DPM
+WHERE	STA.TYPE='NETWORK' 
+	AND STA.TYPE=STAL.TYPE 
+	AND STA.TYPE_STATUS=STAL.TYPE_STATUS 
+	AND LTRIM(RTRIM(STA.STATUS))=LTRIM(RTRIM(STAL.FIX))
+	AND STAL.DESC_TYPE='FIX'
+	--AND STA.LOCATION LIKE 'PLC%'
+	AND DPM.EQUIP_SUBSYSTEM LIKE 'ED%' 
+	AND DPM.PLC_OTHERNAME=STA.LOCATION
+ORDER BY STA.LOCATION</CommandText>
       </Query>
       <Fields>
-        <Field Name="PLC_ID">
-          <DataField>PLC_ID</DataField>
+        <Field Name="LOCATION">
+          <DataField>LOCATION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Online_Status">
-          <DataField>Online_Status</DataField>
+        <Field Name="ONOFF_STATUS">
+          <DataField>ONOFF_STATUS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Running_Status">
-          <DataField>Running_Status</DataField>
+        <Field Name="WORKING_STATUS">
+          <DataField>WORKING_STATUS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

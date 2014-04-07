@@ -277,7 +277,22 @@ BEGIN
 				'Reached CBRA Area at ' 
 				+ COALESCE(LOC.LOCATION,'Invalid location['+IP.LOCATION+']') + ' '
 				+ '[' +COALESCE(IPT.DESCRIPTION,'Invalid TYPE:'+IP.BAG_STATUS) + ']. ' 
-				+ 'CBRA XRAY_ID:' + IP.XRAY_ID + ' BIT Station:' + IP.BIT_STATION + ' ETD Station:' + IP.ETD_STATION + '.' AS BAG_EVENT
+				+ ' CBRA XRAY_ID:' + IP.XRAY_ID + ','
+				+ ' BRP Station:' + IP.BIT_STATION + CASE SUBSTRING(LOC.LOCATION,1,3) 
+														WHEN 'SB1' THEN 'A'
+														WHEN 'SB2' THEN 'B'
+														WHEN 'SB3' THEN 'C'
+														WHEN 'SB4' THEN 'D'
+														ELSE ''
+													 END + ','
+				+ ' BIT Station:' + IP.ETD_STATION + CASE SUBSTRING(LOC.LOCATION,1,3) 
+														WHEN 'SB1' THEN 'A'
+														WHEN 'SB2' THEN 'B'
+														WHEN 'SB3' THEN 'C'
+														WHEN 'SB4' THEN 'D'
+														ELSE ''
+													  END + ','
+				+ '.' AS BAG_EVENT
 		FROM	#BT_BAG_GIDLIST_TEMP BBG,  ITEM_1500P IP WITH(NOLOCK)
 		LEFT JOIN LOCATIONS LOC ON IP.LOCATION=LOC.LOCATION_ID
 		LEFT JOIN ITEM_1500P_BAGSTATS IPT ON IP.BAG_STATUS=IPT.TYPE

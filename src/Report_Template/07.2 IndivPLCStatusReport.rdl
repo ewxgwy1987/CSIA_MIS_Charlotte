@@ -136,14 +136,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PLC_name">
+                    <Textbox Name="PLC_NAME">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PLC_name.Value</Value>
+                              <Value>=Fields!PLC_NAME.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -155,7 +155,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PLC_name</rd:DefaultName>
+                      <rd:DefaultName>PLC_NAME</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -212,14 +212,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="software_type">
+                    <Textbox Name="SW_TYPE">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!software_type.Value</Value>
+                              <Value>=Fields!SW_TYPE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -231,7 +231,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>software_type</rd:DefaultName>
+                      <rd:DefaultName>SW_TYPE</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -287,14 +287,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="software_revision">
+                    <Textbox Name="SW_REV">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!software_revision.Value</Value>
+                              <Value>=Fields!SW_REV.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -306,7 +306,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>software_revision</rd:DefaultName>
+                      <rd:DefaultName>SW_REV</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -456,7 +456,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -526,7 +528,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Key_position.Value</Value>
+                              <Value>=Fields!KEY_POS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -602,7 +604,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PLC_status.Value</Value>
+                              <Value>=Fields!PLC_STATUS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -835,7 +837,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!LED_Processor.Value</Value>
+                              <Value>=Fields!LED_CPU.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -911,7 +913,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!LED_Force.Value</Value>
+                              <Value>=Fields!LED_FORCE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -986,7 +988,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!LED_Communication.Value</Value>
+                              <Value>=Fields!LED_COMM.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1061,7 +1063,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!LED_BatteryPower.Value</Value>
+                              <Value>=Fields!LED_BATT.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1214,7 +1216,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MemorySize.Value</Value>
+                              <Value>=Fields!MEM_SIZE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1292,7 +1294,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MemoryUsed.Value</Value>
+                              <Value>=Fields!MEM_USED.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1368,7 +1370,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MemoryComplied.Value</Value>
+                              <Value>=Fields!MEM_CMPL.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1443,7 +1445,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!RungCount.Value</Value>
+                              <Value>=Fields!RUN_CNT.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1518,7 +1520,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ScanTime.Value &amp; "ms"</Value>
+                              <Value>=Fields!SCAN_TIME.Value &amp; "ms"</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1751,7 +1753,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Processor_Error.Value</Value>
+                              <Value>=Fields!CPU_ERR.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1827,7 +1829,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Network_Error.Value</Value>
+                              <Value>=Fields!NWK_ERR.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -2402,71 +2404,81 @@
     <DataSet Name="dsIndivPLCStatus">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_TEST_IndivPLCStatus;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@PLCNAME">
+            <Value>=Parameters!PLCName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_CLT_INDIVIDUAL_PLC</CommandText>
       </Query>
       <Fields>
-        <Field Name="PLC_name">
-          <DataField>PLC_name</DataField>
+        <Field Name="PLC_LOCATION">
+          <DataField>PLC_LOCATION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="software_type">
-          <DataField>software_type</DataField>
+        <Field Name="PLC_NAME">
+          <DataField>PLC_NAME</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="software_revision">
-          <DataField>software_revision</DataField>
+        <Field Name="SW_TYPE">
+          <DataField>SW_TYPE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Key_position">
-          <DataField>Key_position</DataField>
+        <Field Name="SW_REV">
+          <DataField>SW_REV</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PLC_status">
-          <DataField>PLC_status</DataField>
+        <Field Name="KEY_POS">
+          <DataField>KEY_POS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="LED_Processor">
-          <DataField>LED_Processor</DataField>
+        <Field Name="PLC_STATUS">
+          <DataField>PLC_STATUS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="LED_Force">
-          <DataField>LED_Force</DataField>
+        <Field Name="LED_CPU">
+          <DataField>LED_CPU</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="LED_Communication">
-          <DataField>LED_Communication</DataField>
+        <Field Name="LED_FORCE">
+          <DataField>LED_FORCE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="LED_BatteryPower">
-          <DataField>LED_BatteryPower</DataField>
+        <Field Name="LED_COMM">
+          <DataField>LED_COMM</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="MemorySize">
-          <DataField>MemorySize</DataField>
+        <Field Name="LED_BATT">
+          <DataField>LED_BATT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MEM_SIZE">
+          <DataField>MEM_SIZE</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="MemoryUsed">
-          <DataField>MemoryUsed</DataField>
+        <Field Name="MEM_USED">
+          <DataField>MEM_USED</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="MemoryComplied">
-          <DataField>MemoryComplied</DataField>
+        <Field Name="MEM_CMPL">
+          <DataField>MEM_CMPL</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="RungCount">
-          <DataField>RungCount</DataField>
+        <Field Name="RUN_CNT">
+          <DataField>RUN_CNT</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="ScanTime">
-          <DataField>ScanTime</DataField>
+        <Field Name="SCAN_TIME">
+          <DataField>SCAN_TIME</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Processor_Error">
-          <DataField>Processor_Error</DataField>
+        <Field Name="CPU_ERR">
+          <DataField>CPU_ERR</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Network_Error">
-          <DataField>Network_Error</DataField>
+        <Field Name="NWK_ERR">
+          <DataField>NWK_ERR</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -2484,6 +2496,20 @@
         </Field>
         <Field Name="TIMEFORMAT">
           <DataField>TIMEFORMAT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dsPLCs">
+      <Query>
+        <DataSourceName>PGLBHSDB</DataSourceName>
+        <CommandText>SELECT DISTINCT LOCATION
+FROM MDS_STATUS
+WHERE TYPE='PLC'</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="LOCATION">
+          <DataField>LOCATION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -2517,9 +2543,9 @@
       <Prompt>PLC Name</Prompt>
       <ValidValues>
         <DataSetReference>
-          <DataSetName>dsIndivPLCStatus</DataSetName>
-          <ValueField>PLC_name</ValueField>
-          <LabelField>PLC_name</LabelField>
+          <DataSetName>dsPLCs</DataSetName>
+          <ValueField>LOCATION</ValueField>
+          <LabelField>LOCATION</LabelField>
         </DataSetReference>
       </ValidValues>
     </ReportParameter>

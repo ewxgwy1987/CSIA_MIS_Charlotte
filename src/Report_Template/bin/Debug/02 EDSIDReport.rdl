@@ -1054,7 +1054,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1517,7 +1516,7 @@
           <ReportItems>
             <Line Name="lnPHeaderVSeparator">
               <Left>140.70138mm</Left>
-              <Height>35.20789mm</Height>
+              <Height>36.79539mm</Height>
               <Width>0mm</Width>
               <Style>
                 <Border>
@@ -1926,7 +1925,7 @@
           <DataElementOutput>ContentsOnly</DataElementOutput>
           <Top>0.64697mm</Top>
           <Left>1mm</Left>
-          <Height>35.20789mm</Height>
+          <Height>36.79539mm</Height>
           <Width>186.06578mm</Width>
           <Style>
             <Border>
@@ -2012,8 +2011,8 @@
     </PageFooter>
     <PageHeight>27.94cm</PageHeight>
     <PageWidth>21.59cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
+    <LeftMargin>0.8cm</LeftMargin>
+    <RightMargin>0.8cm</RightMargin>
     <TopMargin>2cm</TopMargin>
     <BottomMargin>2cm</BottomMargin>
     <Style>
