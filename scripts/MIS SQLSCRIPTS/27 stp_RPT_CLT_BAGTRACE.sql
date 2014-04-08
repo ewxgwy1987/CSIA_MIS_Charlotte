@@ -1,5 +1,5 @@
 GO
-USE [BHSDB];
+USE [BHSDB_CLT];
 GO
 
 alter PROCEDURE dbo.stp_RPT_CLT_BAGTRACE
@@ -278,14 +278,14 @@ BEGIN
 				+ COALESCE(LOC.LOCATION,'Invalid location['+IP.LOCATION+']') + ' '
 				+ '[' +COALESCE(IPT.DESCRIPTION,'Invalid TYPE:'+IP.BAG_STATUS) + ']. ' 
 				+ ' CBRA XRAY_ID:' + IP.XRAY_ID + ','
-				+ ' BRP Station:' + IP.BIT_STATION + CASE SUBSTRING(LOC.LOCATION,1,3) 
+				+ ' BRP Station:' + IP.BIT_STATION + CASE LOC.SUBSYSTEM
 														WHEN 'SB1' THEN 'A'
 														WHEN 'SB2' THEN 'B'
 														WHEN 'SB3' THEN 'C'
 														WHEN 'SB4' THEN 'D'
 														ELSE ''
 													 END + ','
-				+ ' BIT Station:' + IP.ETD_STATION + CASE SUBSTRING(LOC.LOCATION,1,3) 
+				+ ' BIT Station:' + IP.ETD_STATION + CASE LOC.SUBSYSTEM
 														WHEN 'SB1' THEN 'A'
 														WHEN 'SB2' THEN 'B'
 														WHEN 'SB3' THEN 'C'

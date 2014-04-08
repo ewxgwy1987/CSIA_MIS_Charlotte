@@ -2,7 +2,7 @@ GO
 USE [BHSDB];
 GO
 
-create PROCEDURE dbo.stp_RPT_CLT_BagData
+ALTER PROCEDURE dbo.stp_RPT_CLT_BagData
 		  @DTFROM datetime,
 		  @DTTO datetime
 AS
@@ -241,7 +241,22 @@ BEGIN
 	--PROBLEM: Telegram 1500P is not sent when bags are removed, but before bags are moved to inspection tables.
 	UPDATE BBT
 	SET BBT.CBRA_REMOVED_TIME=i1500.TIME_STAMP,
-		BBT.CBRA_ETDSTATION#='ETD STATION: ' + I1500.ETD_STATION
+		BBT.CBRA_ETDSTATION# =	'BRP: ' + I1500.BIT_STATION
+								+	CASE LOC.SUBSYSTEM
+										WHEN 'SB1' THEN 'A'
+										WHEN 'SB2' THEN 'B'
+										WHEN 'SB3' THEN 'C'
+										WHEN 'SB4' THEN 'D'
+										ELSE ''
+									END + CHAR(13) + CHAR(10)
+								+	'BIT: ' + I1500.ETD_STATION
+								+	CASE LOC.SUBSYSTEM
+										WHEN 'SB1' THEN 'A'
+										WHEN 'SB2' THEN 'B'
+										WHEN 'SB3' THEN 'C'
+										WHEN 'SB4' THEN 'D'
+										ELSE ''
+									END
 	FROM #BD_BAGDATA_TEMP BBT, ITEM_1500P i1500 WITH(NOLOCK)
 	LEFT JOIN LOCATIONS LOC ON  i1500.LOCATION=LOC.LOCATION_ID
 	--LEFT JOIN  MIS_CBRA_ETD#2LOCATION_MAP CELM ON LOC.LOCATION=CELM.LOCATION

@@ -362,11 +362,6 @@
             </TablixMember>
             <TablixMember>
               <Group Name="EDS" />
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!EDS_MACHINE_ID.Value</Value>
-                </SortExpression>
-              </SortExpressions>
               <TablixMembers>
                 <TablixMember />
               </TablixMembers>
@@ -525,7 +520,7 @@
                     <Textbox Name="lblEquipId7">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!PLC_ID.Value</SortExpression>
+                        <SortExpression>=Fields!EDS_NAME.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -608,7 +603,7 @@
                     <Textbox Name="Textbox15">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!Running_Status.Value</SortExpression>
+                        <SortExpression>=Fields!WORKING_STATUS.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -654,14 +649,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="LOCATION">
+                    <Textbox Name="EDS_PLC">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!LOCATION.Value</Value>
+                              <Value>=Fields!EDS_PLC.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -671,16 +666,13 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>LOCATION</rd:DefaultName>
+                      <rd:DefaultName>EDS_PLC</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
                         </Border>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
                         <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Bottom</VerticalAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -751,11 +743,8 @@
                         <Border>
                           <Style>None</Style>
                         </Border>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
                         <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Bottom</VerticalAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -916,7 +905,7 @@
               <Group Name="PLC" />
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!PLC_ID.Value</Value>
+                  <Value>=Fields!EDS_NAME.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -1034,9 +1023,6 @@
                   <CellContents>
                     <Textbox Name="lblEquipId6">
                       <CanGrow>true</CanGrow>
-                      <UserSort>
-                        <SortExpression>=Fields!Comm_Module_ID.Value</SortExpression>
-                      </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -1125,7 +1111,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Comm_Module_ID.Value</Value>
+                              <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1161,7 +1147,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Status.Value</Value>
+                              <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1296,11 +1282,6 @@
             </TablixMember>
             <TablixMember>
               <Group Name="COMM" />
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!Comm_Module_ID.Value</Value>
-                </SortExpression>
-              </SortExpressions>
               <TablixMembers>
                 <TablixMember />
               </TablixMembers>
@@ -1310,12 +1291,15 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsCommInterfaceModule</DataSetName>
+        <DataSetName>dsEDSMachine</DataSetName>
         <Top>5.37656cm</Top>
         <Left>1.46169mm</Left>
         <Height>0.94488in</Height>
         <Width>5.68098in</Width>
         <ZIndex>2</ZIndex>
+        <Visibility>
+          <Hidden>true</Hidden>
+        </Visibility>
         <Style />
       </Tablix>
     </ReportItems>
@@ -1743,64 +1727,6 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsComputerMain">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_rpt_compuTERSTATUS</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="SUBSYSTEM">
-          <DataField>SUBSYSTEM</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="EQUIPID">
-          <DataField>EQUIPID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ONSTATUS">
-          <DataField>ONSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OFFSTATUS">
-          <DataField>OFFSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CURSTATUS">
-          <DataField>CURSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsPLCStatus">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_rpt_plcstATUS</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="SUBSYSTEM">
-          <DataField>SUBSYSTEM</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="EQUIPID">
-          <DataField>EQUIPID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ONSTATUS">
-          <DataField>ONSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OFFSTATUS">
-          <DataField>OFFSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CURSTATUS">
-          <DataField>CURSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
     <DataSet Name="dsDTFormat">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
@@ -1821,7 +1747,17 @@
     <DataSet Name="dsEDSMachine">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_TEST_EDSMACHINE ;</CommandText>
+        <CommandText>SELECT	MSTAT.LOCATION AS EDS_MACHINE_ID,
+		CASE LTRIM(RTRIM(MSTAT.STATUS))
+			WHEN '1' THEN 'RTR-Hight'
+			ELSE 'RTR-Low'
+		END AS COMM_SIGNAL
+FROM	MDS_STATUS MSTAT
+WHERE	TYPE='EDS' AND TYPE_STATUS='RTR_HI'
+ORDER BY CASE LEN(MSTAT.LOCATION)
+			WHEN 3 THEN SUBSTRING(MSTAT.LOCATION,1,2)+'0'+SUBSTRING(MSTAT.LOCATION,3,1)
+			ELSE MSTAT.LOCATION
+		 END</CommandText>
       </Query>
       <Fields>
         <Field Name="EDS_MACHINE_ID">
@@ -1837,11 +1773,16 @@
     <DataSet Name="dsPLCBank">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT	STA.LOCATION, 
-		STAL.DESCRIPTION  AS 'ONOFF_STATUS',
+        <CommandText>SELECT	DISTINCT 
+		CASE LEN(DPM.EQUIP_SUBSYSTEM)
+			WHEN 3 THEN SUBSTRING(DPM.EQUIP_SUBSYSTEM,1,2)+'0'+SUBSTRING(DPM.EQUIP_SUBSYSTEM,3,1)
+			ELSE DPM.EQUIP_SUBSYSTEM
+		 END AS EDS_NAME,
+		STA.LOCATION + '('+DPM.EQUIP_SUBSYSTEM+')' AS EDS_PLC, 
+		LTRIM(RTRIM(STAL.DESCRIPTION))  AS 'ONOFF_STATUS',
 		CASE STAL.DESCRIPTION
 			WHEN 'OFFLINE' THEN 'Standby' 
-			WHEN 'ONILNE' THEN 'Running'
+			WHEN 'ONLINE' THEN 'Running'
 		END	AS 'WORKING_STATUS'
 FROM	MDS_STATUS STA, MDS_STATUS_LK STAL, MIS_DEVICE_PLC_MAP DPM
 WHERE	STA.TYPE='NETWORK' 
@@ -1852,35 +1793,26 @@ WHERE	STA.TYPE='NETWORK'
 	--AND STA.LOCATION LIKE 'PLC%'
 	AND DPM.EQUIP_SUBSYSTEM LIKE 'ED%' 
 	AND DPM.PLC_OTHERNAME=STA.LOCATION
-ORDER BY STA.LOCATION</CommandText>
+ORDER BY CASE LEN(DPM.EQUIP_SUBSYSTEM)
+			WHEN 3 THEN SUBSTRING(DPM.EQUIP_SUBSYSTEM,1,2)+'0'+SUBSTRING(DPM.EQUIP_SUBSYSTEM,3,1)
+			ELSE DPM.EQUIP_SUBSYSTEM
+		 END</CommandText>
       </Query>
       <Fields>
-        <Field Name="LOCATION">
-          <DataField>LOCATION</DataField>
+        <Field Name="EDS_NAME">
+          <DataField>EDS_NAME</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ONOFF_STATUS">
           <DataField>ONOFF_STATUS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="EDS_PLC">
+          <DataField>EDS_PLC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="WORKING_STATUS">
           <DataField>WORKING_STATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsCommInterfaceModule">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_TEST_CommInterfaceModule ;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Comm_Module_ID">
-          <DataField>Comm_Module_ID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Status">
-          <DataField>Status</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

@@ -836,7 +836,6 @@
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
-                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1.5pt</Width>
                         </BottomBorder>
@@ -1976,7 +1975,6 @@
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
-                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1.5pt</Width>
                         </BottomBorder>
@@ -2074,7 +2072,6 @@
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
-                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1.5pt</Width>
                         </BottomBorder>
@@ -2960,11 +2957,11 @@
     <DataSet Name="dsComputerStatus">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT	STA.LOCATION, 
-		STAL.DESCRIPTION  AS 'ONOFF_STATUS',
+        <CommandText>SELECT	STA.LOCATION AS EQUIP_ID, 
+		LTRIM(RTRIM(STAL.DESCRIPTION))  AS 'ONOFF_STATUS',
 		CASE STAL.DESCRIPTION
 			WHEN 'OFFLINE' THEN 'Standby' 
-			WHEN 'ONILNE' THEN 'Running'
+			WHEN 'ONLINE' THEN 'Running'
 		END	AS 'WORKING_STATUS'
 FROM	MDS_STATUS STA, MDS_STATUS_LK STAL
 WHERE	STA.TYPE='NETWORK' 
@@ -2980,8 +2977,8 @@ WHERE	STA.TYPE='NETWORK'
 ORDER BY STA.LOCATION</CommandText>
       </Query>
       <Fields>
-        <Field Name="LOCATION">
-          <DataField>LOCATION</DataField>
+        <Field Name="EQUIP_ID">
+          <DataField>EQUIP_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ONOFF_STATUS">
@@ -3015,11 +3012,11 @@ WHERE APP_CODE LIKE 'BHSDB%' OR APP_CODE LIKE 'MDS%' OR APP_CODE LIKE 'SAC%'</Co
     <DataSet Name="dsPLCBank">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT	STA.LOCATION, 
-		STAL.DESCRIPTION  AS 'ONOFF_STATUS',
+        <CommandText>SELECT	STA.LOCATION AS EQUIP_ID, 
+		LTRIM(RTRIM(STAL.DESCRIPTION))  AS 'ONOFF_STATUS',
 		CASE STAL.DESCRIPTION
 			WHEN 'OFFLINE' THEN 'Standby' 
-			WHEN 'ONILNE' THEN 'Running'
+			WHEN 'ONLINE' THEN 'Running'
 		END	AS 'WORKING_STATUS'
 FROM	MDS_STATUS STA, MDS_STATUS_LK STAL
 WHERE	STA.TYPE='NETWORK' 
@@ -3031,8 +3028,8 @@ WHERE	STA.TYPE='NETWORK'
 ORDER BY STA.LOCATION</CommandText>
       </Query>
       <Fields>
-        <Field Name="LOCATION">
-          <DataField>LOCATION</DataField>
+        <Field Name="EQUIP_ID">
+          <DataField>EQUIP_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ONOFF_STATUS">
