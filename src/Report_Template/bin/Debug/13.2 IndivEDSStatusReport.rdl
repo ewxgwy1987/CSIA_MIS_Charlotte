@@ -1706,7 +1706,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIF(Fields!BAGS_BHS_UNKNOWN_PERC.Value=-1,"--",Format(Fields!BAGS_BHS_UNKNOWN_PERC.Value,"##.###")*100 &amp; "%")</Value>
+                              <Value>=IIF(Fields!BAGS_BHS_UNKNOWN_PERC.Value=-1,"--",Format(ROUND(Fields!BAGS_BHS_UNKNOWN_PERC.Value,2),"00.00")*100 &amp; "%")</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1730,6 +1730,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1955,7 +1956,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>

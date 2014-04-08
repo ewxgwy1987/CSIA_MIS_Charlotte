@@ -860,11 +860,6 @@
             </TablixMember>
             <TablixMember>
               <Group Name="Input_Location" />
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!PhotoCellID.Value</Value>
-                </SortExpression>
-              </SortExpressions>
               <TablixMembers>
                 <TablixMember />
               </TablixMembers>

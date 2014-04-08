@@ -84,7 +84,7 @@ BEGIN
 	WHERE GID.TIME_STAMP BETWEEN @DTFROM AND @DTTO
 		AND GID.LOCATION=LOC.LOCATION_ID
 		AND (LOC.LOCATION LIKE 'SS%' OR LOC.LOCATION LIKE 'ED%' OR LOC.LOCATION LIKE 'OOG%' OR LOC.LOCATION LIKE 'SB%')
-		AND (LOC.LOCATION <> 'OOG1-5' AND LOC.LOCATION <> 'OOG2-4');
+		AND (LOC.LOCATION <> 'OOG1-5' AND LOC.LOCATION <> 'OOG2-5');
 	-------------------------------------END by Guo Wenyu 2014/1/4 END-------------------------------------
 
 	--select * from #BD_BAGDATA_TEMP where gid='3223000423';
@@ -209,7 +209,7 @@ BEGIN
 	FROM GID_USED GID, LOCATIONS LOC WITH(NOLOCK)
 	WHERE GID.TIME_STAMP BETWEEN @DTFROM AND @DTTO
 		AND GID.LOCATION=LOC.LOCATION_ID
-		AND (LOC.LOCATION = 'OOG1-5' OR LOC.LOCATION = 'OOG2-4');
+		AND (LOC.LOCATION = 'OOG1-5' OR LOC.LOCATION = 'OOG2-5');
 
 	----11. Update OOG identified time
 	----An oog bag cannot get the identified time from BMAM, because the GID is changed after oog line
