@@ -1921,14 +1921,6 @@
       <rd:SecurityType>DataBase</rd:SecurityType>
       <rd:DataSourceID>9a6c5141-08eb-4401-83b5-7c8aea807afa</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="DynamicDS">
-      <ConnectionProperties>
-        <DataProvider>SQL</DataProvider>
-        <ConnectString>="Data Source=EWXGWY1987-PC\MSSQLSERVERGWY;Initial Catalog=" &amp; Parameters!Database.Value</ConnectString>
-      </ConnectionProperties>
-      <rd:SecurityType>DataBase</rd:SecurityType>
-      <rd:DataSourceID>48731764-13eb-4768-975e-b691e0b5260d</rd:DataSourceID>
-    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="dsReportLogo">
@@ -1966,7 +1958,7 @@
     </DataSet>
     <DataSet Name="dsMain">
       <Query>
-        <DataSourceName>DynamicDS</DataSourceName>
+        <DataSourceName>PGLBHSDB</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@DTFrom">
             <Value>=Parameters!DTFrom.Value</Value>
@@ -2098,16 +2090,6 @@ WHERE 	MDS_USED='1'</CommandText>
     </DataSet>
   </DataSets>
   <ReportParameters>
-    <ReportParameter Name="test">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <DefaultValue>
-        <Values>
-          <Value> </Value>
-        </Values>
-      </DefaultValue>
-      <Prompt> </Prompt>
-    </ReportParameter>
     <ReportParameter Name="ServerName">
       <DataType>String</DataType>
       <DefaultValue>
@@ -2119,8 +2101,8 @@ WHERE 	MDS_USED='1'</CommandText>
       <ValidValues>
         <ParameterValues>
           <ParameterValue>
-            <Value>EWXGWY1987-PC\MSSQLSERVERGWY</Value>
-            <Label>EWXGWY1987-PC\MSSQLSERVERGWY</Label>
+            <Value>SG10031CSD6782</Value>
+            <Label>SG10031CSD6782</Label>
           </ParameterValue>
         </ParameterValues>
       </ValidValues>
