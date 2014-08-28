@@ -3086,7 +3086,7 @@
         <Values>
           <Value>=iif(Parameters!DBasic.Value="15MINUTES",DateAdd(DateInterval.Minute,-15,Now),
 	iif(Parameters!DBasic.Value="1HOUR",DateAdd(DateInterval.Hour,-1,Now),
-	iif(Parameters!DBasic.Value="1DAY",DateAdd(DateInterval.Day,-1,Now),
+	iif(Parameters!DBasic.Value="1DAY",DateAdd(DateInterval.Day,-1,CDate(Today + " 08:00:00")),
 	iif(Parameters!DBasic.Value="1WEEK",DateAdd(DateInterval.Day,-7,Now),
 	iif(Parameters!DBasic.Value="1MONTH",DateAdd(DateInterval.Month,-1,Now),
 	iif(Parameters!DBasic.Value="1YEAR",DateAdd(DateInterval.Year,-1,Now),Now))))))</Value>

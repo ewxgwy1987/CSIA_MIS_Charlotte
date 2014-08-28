@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>PGLBHSDB_NEW</DataSourceReference>
+      <CommandText>SELECT * FROM MIS_DATE_BASIC</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="DATE_BASIC_VALUE">
+        <DataField>DATE_BASIC_VALUE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="DATE_BASIC_LABEL">
+        <DataField>DATE_BASIC_LABEL</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="IS_DEFAULT">
+        <DataField>IS_DEFAULT</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

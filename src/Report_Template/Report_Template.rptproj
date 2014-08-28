@@ -7,7 +7,24 @@
       <FullPath>PGLBHSDB_NEW.rds</FullPath>
     </ProjectItem>
   </DataSources>
-  <DataSets />
+  <DataSets>
+    <ProjectItem>
+      <Name>dsDateBasic.rsd</Name>
+      <FullPath>dsDateBasic.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>dsDefaultDateBasic.rsd</Name>
+      <FullPath>dsDefaultDateBasic.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>dsDTFormat.rsd</Name>
+      <FullPath>dsDTFormat.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>dsReportLogo.rsd</Name>
+      <FullPath>dsReportLogo.rsd</FullPath>
+    </ProjectItem>
+  </DataSets>
   <Reports>
     <ProjectItem>
       <Name>01 BagTagReport.rdl</Name>
@@ -350,8 +367,8 @@
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
         <TargetServerURL>http://localhost/ReportServer</TargetServerURL>
-        <TargetFolder>BHSReports</TargetFolder>
-        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <TargetFolder>BHSReports HIS</TargetFolder>
+        <TargetDataSourceFolder>Data Sources HIS</TargetDataSourceFolder>
         <OverwriteDataSources>true</OverwriteDataSources>
         <TargetDatasetFolder>Datasets</TargetDatasetFolder>
         <OverwriteDatasets>true</OverwriteDatasets>

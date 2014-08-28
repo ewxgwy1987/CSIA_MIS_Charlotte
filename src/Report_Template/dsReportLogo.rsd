@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>PGLBHSDB_NEW</DataSourceReference>
+      <CommandText>SELECT PIC_TITLE, PIC_IMAGE FROM PICTURES WHERE PIC_NAME = 'Charlotte-ReportLogo'</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="PIC_TITLE">
+        <DataField>PIC_TITLE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PIC_IMAGE">
+        <DataField>PIC_IMAGE</DataField>
+        <rd:TypeName>System.Byte[]</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
