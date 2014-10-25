@@ -1730,7 +1730,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -2024,7 +2023,7 @@
   <Width>157.10112mm</Width>
   <Page>
     <PageHeader>
-      <Height>45.92033mm</Height>
+      <Height>48.56616mm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2527,7 +2526,7 @@
             <BreakLocation>End</BreakLocation>
           </PageBreak>
           <DataElementOutput>ContentsOnly</DataElementOutput>
-          <Top>0mm</Top>
+          <Top>0.9525mm</Top>
           <Left>1mm</Left>
           <Height>43.91051mm</Height>
           <Width>155.16995mm</Width>
