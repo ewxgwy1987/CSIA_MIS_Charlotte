@@ -1,5 +1,5 @@
 GO
-USE [BHSDB];
+USE [BHSDB_CLT_Demo];
 GO
 
 ALTER PROCEDURE dbo.stp_RPT_CLT_BDDFault

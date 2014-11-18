@@ -998,7 +998,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!ALM_TIMESET.Value, "h:mm:ss tt")</Value>
+                              <Value>=Format(Fields!ALM_TIMESET.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1028,7 +1028,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!ALM_TIMECLEAR.Value, "h:mm:ss tt")</Value>
+                              <Value>=Format(Fields!ALM_TIMECLEAR.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -2061,66 +2061,6 @@
       </ReportItems>
       <Style />
     </PageHeader>
-    <PageFooter>
-      <Height>2.54cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="Textbox313">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>WARNING: </Value>
-                  <Style>
-                    <FontFamily>Times New Roman</FontFamily>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>THIS RECORD CONTAINS SENSITIVE SECURITY INFORMATION THAT IS CONTROLLED UNDER 49 CFR PARTS 15 AND 1520. NO PART OF THIS RECORD MAY BE DISCLOSED TO PERSONS WITHOUT A "NEED TO KNOW", AS DEFINED IN 49 CFR PARTS 15 AND 1520, EXCEPT WITH THE WRITTEN PERMISSION OF THE ADMINISTRATOR OF THE TRANSPORTATION SECURITY ADMINISTRATION OR SECRETARY OF TRANSPORTATION. UNAUTHORIZED RELEASE MAY RESULT IN CIVIL PENALTY OR OTHER ACTION. FOR U.S. GOVERNMENT AGENCIES, PUBLIC DISCLOSURE IS GOVERNED BY 5 U.S.C. 552 AND 49 CFR PARTS 15 AND 1520.</Value>
-                  <Style>
-                    <FontFamily>Times New Roman</FontFamily>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Normal</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>General</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox313</rd:DefaultName>
-          <Top>0.05556in</Top>
-          <Left>0.05754in</Left>
-          <Height>0.90209in</Height>
-          <Width>6.51979in</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <TopBorder>
-              <Color>Black</Color>
-              <Style>Solid</Style>
-              <Width>1.5pt</Width>
-            </TopBorder>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageFooter>
     <PageHeight>27.94cm</PageHeight>
     <PageWidth>21.59cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
@@ -2198,6 +2138,13 @@
           <QueryParameter Name="@FaultType">
             <Value>=Parameters!FaultType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@MessageType">
+            <Value>=Parameters!MessageType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ReportType">
+            <Value>FAULT</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
         <CommandText>stp_RPT_CLT_EquipCorrection</CommandText>
@@ -2226,6 +2173,10 @@
         <Field Name="ALM_DURATION">
           <DataField>ALM_DURATION</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="HIDDEN_LOC">
+          <DataField>HIDDEN_LOC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -2265,9 +2216,14 @@ ORDER BY INTERNAL_LOC</CommandText>
     <DataSet Name="dsFaultType">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT	FAULT_NAME, FAULT_DESCRIPTION
-FROM 	REPORT_FAULT
-WHERE 	MDS_USED='1'</CommandText>
+        <CommandText>SELECT DISTINCT MAMT.FAULT_NAME,RF.FAULT_DESCRIPTION
+FROM MDS_ALARM_MESSAGE_TYPE MAMT, REPORT_FAULT RF
+WHERE MAMT.FAULT_NAME=RF.FAULT_NAME
+AND RF.MDS_USED='1'
+AND MAMT.ALARM_TYPE_FAULT=1
+UNION
+SELECT 'Bag Lost','Bag Lost'
+ORDER BY FAULT_DESCRIPTION</CommandText>
       </Query>
       <Fields>
         <Field Name="FAULT_NAME">
@@ -2317,6 +2273,29 @@ WHERE 	MDS_USED='1'</CommandText>
         <Field Name="IS_DEFAULT">
           <DataField>IS_DEFAULT</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dsMessageType">
+      <Query>
+        <DataSourceName>PGLBHSDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@FaultType">
+            <Value>=Parameters!FaultType.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT MAMT.[MESSAGE]
+FROM MDS_ALARM_MESSAGE_TYPE MAMT
+WHERE MAMT.FAULT_NAME IN (@FaultType)
+AND MAMT.ALARM_TYPE_FAULT=1
+UNION
+SELECT 'Bag Lost Track'
+WHERE 'Bag Lost' IN (@FaultType)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="MESSAGE">
+          <DataField>MESSAGE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -2387,6 +2366,12 @@ WHERE 	MDS_USED='1'</CommandText>
     </ReportParameter>
     <ReportParameter Name="Subsystem">
       <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsSubsystem</DataSetName>
+          <ValueField>SUBSYSTEM</ValueField>
+        </DataSetReference>
+      </DefaultValue>
       <Prompt>Subsystem :</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -2399,6 +2384,12 @@ WHERE 	MDS_USED='1'</CommandText>
     </ReportParameter>
     <ReportParameter Name="EquipmentID">
       <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsEquipmentID</DataSetName>
+          <ValueField>LOCATION</ValueField>
+        </DataSetReference>
+      </DefaultValue>
       <Prompt>Equipment ID :</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -2411,12 +2402,36 @@ WHERE 	MDS_USED='1'</CommandText>
     </ReportParameter>
     <ReportParameter Name="FaultType">
       <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsFaultType</DataSetName>
+          <ValueField>FAULT_NAME</ValueField>
+        </DataSetReference>
+      </DefaultValue>
       <Prompt>Fault Type :</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>dsFaultType</DataSetName>
           <ValueField>FAULT_NAME</ValueField>
           <LabelField>FAULT_DESCRIPTION</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="MessageType">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsMessageType</DataSetName>
+          <ValueField>MESSAGE</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Message:</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsMessageType</DataSetName>
+          <ValueField>MESSAGE</ValueField>
+          <LabelField>MESSAGE</LabelField>
         </DataSetReference>
       </ValidValues>
       <MultiValue>true</MultiValue>
