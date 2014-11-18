@@ -1130,7 +1130,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!BMA_TIMESTAMP.Value</Value>
+                              <Value>=Format(Fields!BMA_TIMESTAMP.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1157,6 +1157,7 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>

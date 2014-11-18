@@ -240,7 +240,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!ALM_TIMESET.Value, Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!ALM_TIMESET.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -269,7 +269,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!ALM_TIMECLEAR.Value, Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!ALM_TIMECLEAR.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -287,6 +287,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>

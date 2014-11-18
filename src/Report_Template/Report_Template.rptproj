@@ -151,6 +151,18 @@
       <FullPath>29 CBISExecutiveSummary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>30 BHS Event.rdl</Name>
+      <FullPath>30 BHS Event.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>31 DailyCBISSummaryReport.rdl</Name>
+      <FullPath>31 DailyCBISSummaryReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>32 DailyCBISBagVolumeReport.rdl</Name>
+      <FullPath>32 DailyCBISBagVolumeReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>BaggageJamStatisticReport(Maintenance).rdl</Name>
       <FullPath>BaggageJamStatisticReport(Maintenance).rdl</FullPath>
     </ProjectItem>
@@ -355,6 +367,10 @@
       <FullPath>Z 25 OLD_TimeinSystemReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Z 26 TimeinSystemReport.rdl</Name>
+      <FullPath>Z 26 TimeinSystemReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Z Remove 04 InboundReportQuery.rdl</Name>
       <FullPath>Z Remove 04 InboundReportQuery.rdl</FullPath>
     </ProjectItem>
@@ -363,20 +379,8 @@
       <FullPath>Z wrong-RunoutReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Z 26 TimeinSystemReport.rdl</Name>
-      <FullPath>Z 26 TimeinSystemReport.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>30 BHS Event.rdl</Name>
-      <FullPath>30 BHS Event.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>31 DailyCBISSummaryReport.rdl</Name>
-      <FullPath>31 DailyCBISSummaryReport.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>32 DailyCBISBagVolumeReport.rdl</Name>
-      <FullPath>32 DailyCBISBagVolumeReport.rdl</FullPath>
+      <Name>33 CBRAExecutiveSummaryReport.rdl</Name>
+      <FullPath>33 CBRAExecutiveSummaryReport.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

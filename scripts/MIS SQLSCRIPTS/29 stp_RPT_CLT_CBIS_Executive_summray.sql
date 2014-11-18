@@ -2,7 +2,7 @@ GO
 USE [BHSDB];
 GO
 
-CREATE PROCEDURE dbo.stp_RPT_CLT_CBIS_Executive_Summray
+alter PROCEDURE dbo.stp_RPT_CLT_CBIS_Executive_Summray
 		  @DTFROM datetime,
 		  @DTTO datetime
 AS
@@ -171,8 +171,8 @@ BEGIN
 		AND IPR.IPRTYPE='C'
 		AND IPR.TIME_STAMP=(SELECT MAX(TIME_STAMP) FROM #CES_RECENT_IPR_TEMP IPR2 WHERE IPR2.GID=IPR.GID);
 
-	--SELECT * FROM #CES_BAGICR_TEMP;
-	--SELECT * FROM #CES_BAG_PREITI_TEMP WHERE Tracked_ToClear_Flag=0 AND Tracked_ToCBRA_Flag=0 ORDER BY EDS_Location;
+	--SELECT * FROM #CES_BAGICR_TEMP WHERE OSR_Alarm_Flag=1;
+	--SELECT * FROM #CES_BAG_PREITI_TEMP WHERE Tracked_ToClear_Flag=0 AND Tracked_ToCBRA_Flag=1 ORDER BY EDS_Location;
 
 	--3. Analyse the Statistic data from #CES_BAGICR_TEMP, and insert into #CES_Statistic
 	CREATE TABLE #CES_Statistic
